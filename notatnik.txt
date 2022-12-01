@@ -1,0 +1,14 @@
+<div id="formularze">
+    <h1>Rejestracja</h1>
+    <form method="post">
+        <input type="text" name="name" id="name" placeholder="Login">
+        <input type="password" name="password" id="password" placeholder="Hasło">
+        <button type="submit" name="add">Zarejestruj</button>
+    </form>
+    <h1>Logowanie</h1>
+    <form method="post">
+        <input type="text" name="name2" id="name2" placeholder="Login">
+        <input type="password" name="password2" id="password2" placeholder="Hasło">
+        <button type="submit" name="add2">Zaloguj</button>
+    </form>
+    </div>
