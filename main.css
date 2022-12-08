@@ -1,29 +1,86 @@
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+body,
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	background: linear-gradient(45deg, #4158d0, #c850c0);
+	font-family: sans-serif;
+	overflow-y: visible;
 }
 
-#forms{
-    text-align: center;
-    width: 100vw;
-    height: 100vh;
+#forms {
+	text-align: center;
+	width: 100vw;
+	height: auto;
 }
 
 #logout {
-    position: absolute;
-    background-color: #4fb783;
-    text-decoration: none;
-    color: white;
-    height: 4vh;
-    width: 6vw;
-    text-align: center;
-    padding-top: 1vh;
-    border-radius: 5px;
+	position: absolute;
+	background-color: #4fb783;
+	text-decoration: none;
+	color: white;
+	height: 4vh;
+	width: 6vw;
+	text-align: center;
+	padding-top: 1vh;
+	border-radius: 5px;
+	overflow-y: hidden;
 }
 
-#forms>div{
-    text-align: center;
+#forms div {
+	width: 60vw;
+	margin-left: 20vw;
+}
+table {
+	border-collapse: collapse;
+	overflow: hidden;
+	border-radius: 10px !important;
+	text-align: center;
+	width: 100%;
+}
+table thead tr th {
+	font-family: sans-serif;
+	font-size: 12px;
+	color: #fff;
+	line-height: 1.2;
+	font-weight: unset;
+	padding: 7px;
+}
+thead {
+	height: 30px;
+	background: #36304a;
+	color: white;
+	text-align: center;
+}
+
+tbody tr {
+	font-family: sans-serif;
+	font-size: 10px;
+	color: gray;
+	line-height: 1.2;
+	font-weight: unset;
+	background-color: white;
+}
+
+h1 {
+	color: white;
+	font-family: sans-serif;
+	font-size: 15px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+}
+
+input[type='text'] {
+	border-radius: 5px;
+	border: 2px solid #36304a;
+	padding: 3px;
+}
+
+button {
+	border-radius: 6px;
+	background-color: #4fb783;
+	color: white;
+	padding: 5px;
+	border: 0px;
 }

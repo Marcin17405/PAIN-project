@@ -55,13 +55,25 @@
 
 
 
-
     $sql = "SELECT * FROM user";
     $result = mysqli_query($conn, $sql);
-    echo "UŻYTKOWNICY <br>";
+    echo "<h1>USERS</h1>";
+    echo "<div><table><thead><tr><th>Name</th><th>Password</th><th>Imię</th><th>Nazwisko</th><th>Wiek</th></tr></thead><tbody>";
     while($row = mysqli_fetch_assoc($result)) {
-    echo "Login: " . $row["name"]. ", Password: " . $row["password"]. ", Name: " . $row["imie"]. ", Surname: " . $row["nazwisko"]. ", Age: " . $row["wiek"]. "<br>";
+     
+    echo "<tr>
+    <td>" . $row["name"] . "</td>
+    <td>" . $row["password"] . "</td>
+    <td>" . $row["imie"] . "</td>
+    <td>" . $row["nazwisko"] . "</td>
+    <td>".$row["wiek"]."</td>
+        </tr>";
     }
+    echo "</tbody></table></div><br>";
+
+
+
+
  ?>
  <form method="post">
         <input type="text" name="name3" id="name3" placeholder="Login">
@@ -81,14 +93,18 @@
             echo "Nie Dodano!";
         }
     }
-
-        echo "<br><br>";
-        $sql2 = "SELECT * FROM class";
-        $result = mysqli_query($conn, $sql2);
-        echo "KLASY <br>";
+        $sql = "SELECT * FROM class";
+        $result = mysqli_query($conn, $sql);
+        echo "<h1>CLASSES</h1>";
+        echo "<div><table><thead><tr><th>ID</th><th>Name</th></tr></thead><tbody>";
         while($row = mysqli_fetch_assoc($result)) {
-        echo "ID: " . $row["id"]. ", Name: " . $row["name"]."<br>";
+        echo "<tr>
+        <td>" . $row["id"] . "</td>
+        <td>" . $row["name"] . "</td>
+            </tr>";
         }
+        echo "</tbody></table></div><br>";
+
 ?>
       <form method="post">
         <input type="text" name="id" id="id" placeholder="Login">
@@ -109,13 +125,18 @@
             }
         }
 
-        echo "<br><br>";
-        $sql3 = "SELECT * FROM student";
-        $result = mysqli_query($conn, $sql3);
-        echo "STUDENCI <br>";
+        $sql = "SELECT * FROM student";
+        $result = mysqli_query($conn, $sql);
+        echo "<h1>STUDENTS</h1>";
+        echo "<div><table><thead><tr><th>ID</th><th>Name</th><th>Surname</th></tr></thead><tbody>";
         while($row = mysqli_fetch_assoc($result)) {
-        echo "ID: " . $row["id"]. ", Name: " . $row["name"]. ", Surname: " . $row["surname"]."<br>";
+        echo "<tr>
+        <td>" . $row["id"] . "</td>
+        <td>" . $row["name"] . "</td>
+        <td>" . $row["surname"] . "</td>
+            </tr>";
         }
+        echo "</tbody></table></div><br>";
         ?>
 
         <form method="post">
@@ -137,14 +158,19 @@
                 echo "Nie Dodano!";
             }
         }
-        
-        echo "<br><br>";
-        $sql4 = "SELECT * FROM subject";
-        $result = mysqli_query($conn, $sql4);
-        echo "PRZEDMITOY <br>";
+
+        $sql = "SELECT * FROM subject";
+        $result = mysqli_query($conn, $sql);
+        echo "<h1>SUBJECTS</h1>";
+        echo "<div><table><thead><tr><th>ID</th><th>Name</th></tr></thead><tbody>";
         while($row = mysqli_fetch_assoc($result)) {
-        echo "ID: " . $row["id"]. ", Name: " . $row["name"]."<br>";
+     
+        echo "<tr>
+        <td>" . $row["id"] . "</td>
+        <td>" . $row["name"] . "</td>
+        </tr>";
         }
+        echo "</tbody></table></div><br>";
         ?>
 
  <form method="post">
@@ -164,14 +190,21 @@
             echo "Nie Dodano!";
         }
     }
-
-        echo "<br><br>";
-        $sql5 = "SELECT * FROM teacher";
-        $result = mysqli_query($conn, $sql5);
-        echo "NAUCZYCIELE <br>";
+        $sql = "SELECT * FROM teacher";
+        $result = mysqli_query($conn, $sql);
+        echo "<h1>Teachers</h1>";
+        echo "<div><table><thead><tr><th>ID</th><th>Name</th><th>Surname</th><th>Age</th></tr></thead><tbody>";
         while($row = mysqli_fetch_assoc($result)) {
-        echo "ID: " . $row["id"]. ", Name: " . $row["name"]. ", Surname: " . $row["surname"]. ", Age: " . $row["age"]."<br>";
+         
+        echo "<tr>
+        <td>" . $row["id"] . "</td>
+        <td>" . $row["name"] . "</td>
+        <td>" . $row["surname"] . "</td>
+        <td>" . $row["age"] . "</td>
+            </tr>";
         }
+        echo "</tbody></table></div><br>";
+
 ?>
  <form method="post">
         <input type="text" name="id4" id="id4" placeholder="ID">
