@@ -3,10 +3,22 @@ html {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	overflow-x: hidden;
-	background: linear-gradient(45deg, #4158d0, #c850c0);
 	font-family: sans-serif;
-	overflow-y: visible;
+	background: linear-gradient(45deg, #fffb00, #ff0000, #008a07);
+	background-size: 400% 400%;
+	animation: wave 10s ease-in-out infinite;
+}
+
+@keyframes wave {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 #forms {
@@ -15,22 +27,10 @@ html {
 	height: auto;
 }
 
-#logout {
-	position: absolute;
-	background-color: #4fb783;
-	text-decoration: none;
-	color: white;
-	height: 4vh;
-	width: 6vw;
-	text-align: center;
-	padding-top: 1vh;
-	border-radius: 5px;
-	overflow-y: hidden;
-}
-
 #forms div {
-	width: 60vw;
-	margin-left: 20vw;
+	width: 70vw;
+	margin-left: 15vw;
+	margin-top: 5vh;
 }
 table {
 	border-collapse: collapse;
@@ -41,14 +41,14 @@ table {
 }
 table thead tr th {
 	font-family: sans-serif;
-	font-size: 12px;
+	font-size: 15px;
 	color: #fff;
 	line-height: 1.2;
 	font-weight: unset;
 	padding: 7px;
 }
 thead {
-	height: 30px;
+	height: 40px;
 	background: #36304a;
 	color: white;
 	text-align: center;
@@ -56,19 +56,11 @@ thead {
 
 tbody tr {
 	font-family: sans-serif;
-	font-size: 10px;
+	font-size: 15px;
 	color: gray;
-	line-height: 1.2;
+	line-height: 5;
 	font-weight: unset;
 	background-color: white;
-}
-
-h1 {
-	color: white;
-	font-family: sans-serif;
-	font-size: 15px;
-	margin-bottom: 5px;
-	margin-top: 15px;
 }
 
 input[type='text'] {
@@ -84,3 +76,20 @@ button {
 	padding: 5px;
 	border: 0px;
 }
+
+button:hover {
+	background-color: #45a575;
+		
+}
+
+#log {
+	font-size: 17px;
+	text-decoration: none;
+	background-color: black;
+	color: white;
+	padding: 3.5px;
+	border-radius: 4px;
+	float: right;
+	margin-right: 10px;
+}
+

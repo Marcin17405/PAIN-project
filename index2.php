@@ -11,7 +11,7 @@
 <body>
 <div class="container">
 		<form method="post" >
-			<h3>User Login Form</h3>
+			<h3>Admin Login Form</h3>
 			<label for="name2"><b>Login</b></label>
 			<input name="name2" type="text" placeholder="Enter Login" required>
 
@@ -19,23 +19,9 @@
 			<input name="password2" type="password" placeholder="Enter Password" required>
 
 			<button name = "add2" type="submit">Login</button>
+            <p>Go back to user site <a href="index.php">click here!</a></p>
 		</form>
-
-		<form method="post">
-			<h3>User Registration Form</h3>
-			<label for="name"><b>Name</b></label>
-			<input type="text" placeholder="Enter Name" name="name" required>
-
-			<label for="email"><b>Email</b></label>
-			<input type="text" placeholder="Enter Email" name="email" required>
-
-			<label for="password"><b>Password</b></label>
-			<input type="password" placeholder="Enter Password" name="password" required>
-
-			<button name="add" type="submit">Register</button>
-
-            <p>If you are an employee <a href="index2.php">click here!</a></p>
-
+            
 	</div>
 <?php 
     session_start();
@@ -44,31 +30,6 @@
     $password = "";
     $dbname = "pizzeria";
     $conn =mysqli_connect($servername,$username,$password,$dbname);
-
-    if(isset($_POST['add'])){
-
-        $name = $_POST['name'];
-        $password = $_POST['password'];
-        $email = $_POST['email'];
-        $hash = sha1($password);
-        $sql = "INSERT INTO user (name,password,email) VALUES ('$name','$hash','$email')";
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo '<script type ="text/JavaScript">';  
-            echo 'alert("Invalid Email!")';  
-            echo '</script>'; 
-        } else {
-        if (mysqli_query($conn,$sql)) {
-            echo '<script type ="text/JavaScript">';  
-            echo 'alert("Account created!")';  
-            echo '</script>';
-        } else {
-            echo '<script type ="text/JavaScript">';  
-            echo 'alert("Cannot create an account!")';  
-            echo '</script>';  
-        }
-        }   
-    }
-
     if (isset($_POST['add2'])){
         $username2 = $_POST['name2'];
         $password2 = $_POST['password2'];
@@ -78,7 +39,7 @@
         $count = mysqli_num_rows($result);
     if ($count==1 ){
         $_SESSION['username']= $username2;
-        header('Location: main.php');
+        header('Location: main2.php');
     }
     else {
         echo '<script type ="text/JavaScript">';  
